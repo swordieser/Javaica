@@ -56,7 +56,7 @@ public class Whatever {
                     });
                     break;
             }
-            System.out.println("Whatever");
+
             command = reader.readLine().split(" ");
         }
     }
