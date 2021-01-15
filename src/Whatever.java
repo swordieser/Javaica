@@ -24,7 +24,7 @@ public class Whatever {
                         }
                     }
                     if (i != 0) {
-                        tasks.add(com[1] + "(" + Integer.toString(i) + ")");
+                        tasks.add(com[1] + "(" + i + ")");
                     } else {
                         tasks.add(com[1]);
                     }
@@ -54,7 +54,6 @@ public class Whatever {
                     break;
                 case "load":
                     String loadname = com[1];
-
                     try (BufferedReader br = new BufferedReader(new FileReader(loadname))) {
                         String line;
                         while ((line = br.readLine()) != null) {
@@ -80,7 +79,7 @@ public class Whatever {
                     break;
             }
             if (add_tasks.size() == 0) {
-                command = reader.readLine().split(" ");
+                com = reader.readLine().split(" ");
             }
         }
     }

@@ -1,7 +1,7 @@
 add something
 add something
 add whatever
-save save.txt
+save D:\\JetBrains\\IdeaProjects\\Javaica\\src\\save.txt
 all
 complete something
 completed
