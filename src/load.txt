@@ -1,0 +1,7 @@
+add something
+add something
+add whatever
+save save.txt
+all
+complete something
+completed
