@@ -10,10 +10,24 @@ public class Whatever {
         while (!command[0].equals("exit")) {
             switch (command[0]) {
                 case "add":
-                    tasks.add(command[1]);
+                    int i = 0;
+                    for (String string : tasks) {
+                        if (command[1].equals(string)) {
+                            i++;
+                        }
+                    }
+                    if (i != 0) {
+                        tasks.add(command[1] + "(" + Integer.toString(i) + ")");
+                    } else {
+                        tasks.add(command[1]);
+                    }
                     break;
                 case "all":
-                    tasks.forEach((n) -> System.out.print(n + "; "));
+                    int j = 0;
+                    for (; j < tasks.size() - 1; j++) {
+                        System.out.println(tasks.get(j) + "; ");
+                    }
+                    System.out.println(tasks.get(j) + ".");
                     break;
                 case "delete":
                     tasks.remove(command[1]);
