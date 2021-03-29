@@ -1,7 +1,2 @@
-add something
-add something
-add whatever
-save D:\\JetBrains\\IdeaProjects\\Javaica\\src\\save.txt
-all
-complete something
-completed
+1 — not done
+2 — done — done

@@ -126,15 +126,18 @@ public class View {
                     }
 
                     boolean done = false;
-                    if (str[2].equals("done")) {
+                    if (str[2].equals("done") && str.length > 3) {
                         done = true;
                     }
 
-                    Task task = done ? new Task(id, str[4]) : new Task(id, str[2]);
+
                     if (done) {
+                        Task task = new Task(id, str[4]);
                         task.setDone(true);
                         tasksDone.add(task);
                     } else {
+                        str = line.split(" ", 3);
+                        Task task = new Task(id, str[2]);
                         tasksNotDone.add(task);
                     }
                 }
@@ -143,12 +146,6 @@ public class View {
             }
         } else {
             System.out.println("No file with this name");
-        }
-
-        try {
-            fr.close();
-        } catch (IOException e){
-            e.printStackTrace();
         }
     }
 
